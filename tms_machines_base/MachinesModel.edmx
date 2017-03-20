@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MachinesModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=C:\tms_machines_base\machines.db" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Machine">
+          <Key>
+            <PropertyRef Name="MachineID" />
+          </Key>
+          <Property Name="MachineID" Type="int" Nullable="false" />
+          <Property Name="MachineName" Type="char" MaxLength="250" Nullable="false" />
+          <Property Name="Model" Type="char" MaxLength="250" Nullable="false" />
+          <Property Name="CatalogID" Type="char" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="MachineCharacteristic">
+          <Key>
+            <PropertyRef Name="MachineID" />
+          </Key>
+          <Property Name="MachineID" Type="int" Nullable="false" />
+          <Property Name="DiameterMax" Type="decimal" Precision="53" Scale="0" />
+          <Property Name="LengthMax" Type="decimal" Precision="53" Scale="0" />
+          <Property Name="Magazin" Type="char" MaxLength="25" />
+          <Property Name="Turret" Type="char" MaxLength="25" />
+          <Property Name="Images" Type="char" MaxLength="500" />
+        </EntityType>
+        <Association Name="FK_MachineCharacteristic_0_0">
+          <End Role="Machine" Type="Self.Machine" Multiplicity="1" />
+          <End Role="MachineCharacteristic" Type="Self.MachineCharacteristic" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Machine">
+              <PropertyRef Name="MachineID" />
+            </Principal>
+            <Dependent Role="MachineCharacteristic">
+              <PropertyRef Name="MachineID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MachinesModelStoreContainer">
+          <EntitySet Name="Machine" EntityType="Self.Machine" store:Type="Tables" />
+          <EntitySet Name="MachineCharacteristic" EntityType="Self.MachineCharacteristic" store:Type="Tables" />
+          <AssociationSet Name="FK_MachineCharacteristic_0_0" Association="Self.FK_MachineCharacteristic_0_0">
+            <End Role="Machine" EntitySet="Machine" />
+            <End Role="MachineCharacteristic" EntitySet="MachineCharacteristic" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MachinesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Machine">
+          <Key>
+            <PropertyRef Name="MachineID" />
+          </Key>
+          <Property Name="MachineID" Type="Int32" Nullable="false" />
+          <Property Name="MachineName" Type="String" MaxLength="250" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Model" Type="String" MaxLength="250" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CatalogID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="MachineCharacteristic" Relationship="Self.FK_MachineCharacteristic_0_0" FromRole="Machine" ToRole="MachineCharacteristic" />
+        </EntityType>
+        <EntityType Name="MachineCharacteristic">
+          <Key>
+            <PropertyRef Name="MachineID" />
+          </Key>
+          <Property Name="MachineID" Type="Int32" Nullable="false" />
+          <Property Name="DiameterMax" Type="Decimal" Precision="53" Scale="0" />
+          <Property Name="LengthMax" Type="Decimal" Precision="53" Scale="0" />
+          <Property Name="Magazin" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+          <Property Name="Turret" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+          <Property Name="Images" Type="String" MaxLength="500" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Machine" Relationship="Self.FK_MachineCharacteristic_0_0" FromRole="MachineCharacteristic" ToRole="Machine" />
+        </EntityType>
+        <Association Name="FK_MachineCharacteristic_0_0">
+          <End Role="Machine" Type="Self.Machine" Multiplicity="1" />
+          <End Role="MachineCharacteristic" Type="Self.MachineCharacteristic" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Machine">
+              <PropertyRef Name="MachineID" />
+            </Principal>
+            <Dependent Role="MachineCharacteristic">
+              <PropertyRef Name="MachineID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MachinesEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Machines" EntityType="Self.Machine" />
+          <EntitySet Name="MachineCharacteristics" EntityType="Self.MachineCharacteristic" />
+          <AssociationSet Name="FK_MachineCharacteristic_0_0" Association="Self.FK_MachineCharacteristic_0_0">
+            <End Role="Machine" EntitySet="Machines" />
+            <End Role="MachineCharacteristic" EntitySet="MachineCharacteristics" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MachinesModelStoreContainer" CdmEntityContainer="MachinesEntities">
+          <EntitySetMapping Name="Machines">
+            <EntityTypeMapping TypeName="MachinesModel.Machine">
+              <MappingFragment StoreEntitySet="Machine">
+                <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+                <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="CatalogID" ColumnName="CatalogID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MachineCharacteristics">
+            <EntityTypeMapping TypeName="MachinesModel.MachineCharacteristic">
+              <MappingFragment StoreEntitySet="MachineCharacteristic">
+                <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+                <ScalarProperty Name="DiameterMax" ColumnName="DiameterMax" />
+                <ScalarProperty Name="LengthMax" ColumnName="LengthMax" />
+                <ScalarProperty Name="Magazin" ColumnName="Magazin" />
+                <ScalarProperty Name="Turret" ColumnName="Turret" />
+                <ScalarProperty Name="Images" ColumnName="Images" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
