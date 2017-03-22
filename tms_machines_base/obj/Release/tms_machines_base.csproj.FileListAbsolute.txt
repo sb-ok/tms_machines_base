@@ -1,0 +1,16 @@
+C:\tms_machines_base\tms_machines_base\bin\Release\tms_machines_base.exe.config
+C:\tms_machines_base\tms_machines_base\bin\Release\tms_machines_base.exe
+C:\tms_machines_base\tms_machines_base\bin\Release\tms_machines_base.pdb
+C:\tms_machines_base\tms_machines_base\bin\Release\EntityFramework.dll
+C:\tms_machines_base\tms_machines_base\bin\Release\EntityFramework.SqlServer.dll
+C:\tms_machines_base\tms_machines_base\bin\Release\System.Data.SQLite.dll
+C:\tms_machines_base\tms_machines_base\bin\Release\System.Data.SQLite.EF6.dll
+C:\tms_machines_base\tms_machines_base\bin\Release\System.Data.SQLite.Linq.dll
+C:\tms_machines_base\tms_machines_base\bin\Release\EntityFramework.xml
+C:\tms_machines_base\tms_machines_base\bin\Release\EntityFramework.SqlServer.xml
+C:\tms_machines_base\tms_machines_base\bin\Release\System.Data.SQLite.xml
+C:\tms_machines_base\tms_machines_base\obj\Release\tms_machines_base.MainForm.resources
+C:\tms_machines_base\tms_machines_base\obj\Release\tms_machines_base.Properties.Resources.resources
+C:\tms_machines_base\tms_machines_base\obj\Release\tms_machines_base.csproj.GenerateResource.Cache
+C:\tms_machines_base\tms_machines_base\obj\Release\tms_machines_base.exe
+C:\tms_machines_base\tms_machines_base\obj\Release\tms_machines_base.pdb

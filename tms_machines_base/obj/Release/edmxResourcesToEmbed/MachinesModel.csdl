@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MachinesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Machine">
+    <Key>
+      <PropertyRef Name="MachineID" />
+    </Key>
+    <Property Name="MachineID" Type="Int32" Nullable="false" />
+    <Property Name="MachineName" Type="String" MaxLength="250" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Model" Type="String" MaxLength="250" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CatalogID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="MachineCharacteristic" Relationship="Self.FK_MachineCharacteristic_0_0" FromRole="Machine" ToRole="MachineCharacteristic" />
+  </EntityType>
+  <EntityType Name="MachineCharacteristic">
+    <Key>
+      <PropertyRef Name="MachineID" />
+    </Key>
+    <Property Name="MachineID" Type="Int32" Nullable="false" />
+    <Property Name="DiameterMax" Type="Decimal" Precision="53" Scale="0" />
+    <Property Name="LengthMax" Type="Decimal" Precision="53" Scale="0" />
+    <Property Name="Magazin" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="Turret" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="Images" Type="String" MaxLength="500" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Machine" Relationship="Self.FK_MachineCharacteristic_0_0" FromRole="MachineCharacteristic" ToRole="Machine" />
+  </EntityType>
+  <Association Name="FK_MachineCharacteristic_0_0">
+    <End Role="Machine" Type="Self.Machine" Multiplicity="1" />
+    <End Role="MachineCharacteristic" Type="Self.MachineCharacteristic" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Machine">
+        <PropertyRef Name="MachineID" />
+      </Principal>
+      <Dependent Role="MachineCharacteristic">
+        <PropertyRef Name="MachineID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MachinesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Machines" EntityType="Self.Machine" />
+    <EntitySet Name="MachineCharacteristics" EntityType="Self.MachineCharacteristic" />
+    <AssociationSet Name="FK_MachineCharacteristic_0_0" Association="Self.FK_MachineCharacteristic_0_0">
+      <End Role="Machine" EntitySet="Machines" />
+      <End Role="MachineCharacteristic" EntitySet="MachineCharacteristics" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
