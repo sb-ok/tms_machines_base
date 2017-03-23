@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MachinesModelStoreContainer" CdmEntityContainer="MachinesEntities">
+    <EntitySetMapping Name="Machines">
+      <EntityTypeMapping TypeName="MachinesModel.Machine">
+        <MappingFragment StoreEntitySet="Machine">
+          <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="CatalogID" ColumnName="CatalogID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MachineCharacteristics">
+      <EntityTypeMapping TypeName="MachinesModel.MachineCharacteristic">
+        <MappingFragment StoreEntitySet="MachineCharacteristic">
+          <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+          <ScalarProperty Name="DiameterMax" ColumnName="DiameterMax" />
+          <ScalarProperty Name="LengthMax" ColumnName="LengthMax" />
+          <ScalarProperty Name="Magazin" ColumnName="Magazin" />
+          <ScalarProperty Name="Turret" ColumnName="Turret" />
+          <ScalarProperty Name="Images" ColumnName="Images" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

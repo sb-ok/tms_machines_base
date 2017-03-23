@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Collections;
+
 namespace tms_machines_base
 {
     using System;

@@ -1,1 +1,17 @@
 C:\tms_machines_base\tms_machines_base\bin\Debug\tms_machines_base.exe.config
+C:\tms_machines_base\tms_machines_base\bin\Debug\tms_machines_base.exe
+C:\tms_machines_base\tms_machines_base\bin\Debug\tms_machines_base.pdb
+C:\tms_machines_base\tms_machines_base\bin\Debug\EntityFramework.dll
+C:\tms_machines_base\tms_machines_base\bin\Debug\EntityFramework.SqlServer.dll
+C:\tms_machines_base\tms_machines_base\bin\Debug\System.Data.SQLite.dll
+C:\tms_machines_base\tms_machines_base\bin\Debug\System.Data.SQLite.EF6.dll
+C:\tms_machines_base\tms_machines_base\bin\Debug\System.Data.SQLite.Linq.dll
+C:\tms_machines_base\tms_machines_base\bin\Debug\EntityFramework.xml
+C:\tms_machines_base\tms_machines_base\bin\Debug\EntityFramework.SqlServer.xml
+C:\tms_machines_base\tms_machines_base\bin\Debug\System.Data.SQLite.xml
+C:\tms_machines_base\tms_machines_base\obj\Debug\tms_machines_base.csprojResolveAssemblyReference.cache
+C:\tms_machines_base\tms_machines_base\obj\Debug\tms_machines_base.MainForm.resources
+C:\tms_machines_base\tms_machines_base\obj\Debug\tms_machines_base.Properties.Resources.resources
+C:\tms_machines_base\tms_machines_base\obj\Debug\tms_machines_base.csproj.GenerateResource.Cache
+C:\tms_machines_base\tms_machines_base\obj\Debug\tms_machines_base.exe
+C:\tms_machines_base\tms_machines_base\obj\Debug\tms_machines_base.pdb
