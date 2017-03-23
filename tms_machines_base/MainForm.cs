@@ -166,9 +166,9 @@ namespace tms_machines_base
 
         private void ClearMachinesGrid()
         {
-            for (int i = 0; i < machinesGrid.Rows.Count; i++)
+            for (int i = 0; i < machinesGrid.Rows.Count;)
             {
-                machinesGrid.Rows.RemoveAt(i);
+                machinesGrid.Rows.RemoveAt(0);
             }
         }
 

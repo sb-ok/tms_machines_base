@@ -369,7 +369,7 @@
             // 
             // clearCriteriaBtn
             // 
-            this.clearCriteriaBtn.Location = new System.Drawing.Point(268, 74);
+            this.clearCriteriaBtn.Location = new System.Drawing.Point(265, 76);
             this.clearCriteriaBtn.Name = "clearCriteriaBtn";
             this.clearCriteriaBtn.Size = new System.Drawing.Size(89, 23);
             this.clearCriteriaBtn.TabIndex = 14;
@@ -379,7 +379,7 @@
             // 
             // searchBtn
             // 
-            this.searchBtn.Location = new System.Drawing.Point(11, 74);
+            this.searchBtn.Location = new System.Drawing.Point(168, 76);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(89, 23);
             this.searchBtn.TabIndex = 13;
@@ -389,40 +389,40 @@
             // 
             // paramMaxDiametr
             // 
-            this.paramMaxDiametr.Location = new System.Drawing.Point(222, 46);
+            this.paramMaxDiametr.Location = new System.Drawing.Point(265, 47);
             this.paramMaxDiametr.Name = "paramMaxDiametr";
-            this.paramMaxDiametr.Size = new System.Drawing.Size(55, 22);
+            this.paramMaxDiametr.Size = new System.Drawing.Size(86, 22);
             this.paramMaxDiametr.TabIndex = 12;
             this.paramMaxDiametr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.paramMaxDiametr_KeyPress);
             // 
             // paramMaxLength
             // 
-            this.paramMaxLength.Location = new System.Drawing.Point(222, 19);
+            this.paramMaxLength.Location = new System.Drawing.Point(265, 20);
             this.paramMaxLength.Name = "paramMaxLength";
-            this.paramMaxLength.Size = new System.Drawing.Size(55, 22);
-            this.paramMaxLength.TabIndex = 11;
+            this.paramMaxLength.Size = new System.Drawing.Size(86, 22);
+            this.paramMaxLength.TabIndex = 10;
             this.paramMaxLength.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.paramMaxLength_KeyPress);
             // 
             // paramMinDiameter
             // 
-            this.paramMinDiameter.Location = new System.Drawing.Point(136, 46);
+            this.paramMinDiameter.Location = new System.Drawing.Point(136, 47);
             this.paramMinDiameter.Name = "paramMinDiameter";
-            this.paramMinDiameter.Size = new System.Drawing.Size(55, 22);
-            this.paramMinDiameter.TabIndex = 10;
+            this.paramMinDiameter.Size = new System.Drawing.Size(77, 22);
+            this.paramMinDiameter.TabIndex = 11;
             this.paramMinDiameter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.paramMinDiameter_KeyPress);
             // 
             // paramMinLength
             // 
-            this.paramMinLength.Location = new System.Drawing.Point(136, 19);
+            this.paramMinLength.Location = new System.Drawing.Point(136, 20);
             this.paramMinLength.Name = "paramMinLength";
-            this.paramMinLength.Size = new System.Drawing.Size(55, 22);
+            this.paramMinLength.Size = new System.Drawing.Size(77, 22);
             this.paramMinLength.TabIndex = 9;
             this.paramMinLength.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.paramMinLength_KeyPress);
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(197, 46);
+            this.label16.Location = new System.Drawing.Point(227, 50);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(24, 16);
             this.label16.TabIndex = 8;
@@ -431,7 +431,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(197, 20);
+            this.label15.Location = new System.Drawing.Point(227, 21);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(24, 16);
             this.label15.TabIndex = 5;
@@ -440,7 +440,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(112, 46);
+            this.label14.Location = new System.Drawing.Point(112, 47);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(23, 16);
             this.label14.TabIndex = 3;
@@ -449,7 +449,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(112, 20);
+            this.label13.Location = new System.Drawing.Point(112, 21);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(23, 16);
             this.label13.TabIndex = 2;
@@ -458,7 +458,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(8, 46);
+            this.label12.Location = new System.Drawing.Point(8, 47);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(104, 16);
             this.label12.TabIndex = 1;
@@ -467,7 +467,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(8, 20);
+            this.label11.Location = new System.Drawing.Point(8, 21);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(88, 16);
             this.label11.TabIndex = 0;
