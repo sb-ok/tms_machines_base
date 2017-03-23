@@ -375,6 +375,7 @@
             this.clearCriteriaBtn.TabIndex = 14;
             this.clearCriteriaBtn.Text = " Очистить";
             this.clearCriteriaBtn.UseVisualStyleBackColor = true;
+            this.clearCriteriaBtn.Click += new System.EventHandler(this.clearCriteriaBtn_Click);
             // 
             // searchBtn
             // 
@@ -408,7 +409,6 @@
             this.paramMinDiameter.Name = "paramMinDiameter";
             this.paramMinDiameter.Size = new System.Drawing.Size(55, 22);
             this.paramMinDiameter.TabIndex = 10;
-            this.paramMinDiameter.Text = "0";
             this.paramMinDiameter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.paramMinDiameter_KeyPress);
             // 
             // paramMinLength
@@ -417,7 +417,6 @@
             this.paramMinLength.Name = "paramMinLength";
             this.paramMinLength.Size = new System.Drawing.Size(55, 22);
             this.paramMinLength.TabIndex = 9;
-            this.paramMinLength.Text = "0";
             this.paramMinLength.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.paramMinLength_KeyPress);
             // 
             // label16

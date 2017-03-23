@@ -128,24 +128,24 @@ namespace tms_machines_base
                 IQueryable<MachineCharacteristic> query = dbContext.MachineCharacteristics;
                 if (paramMinDiameter.TextLength > 0)
                 {
-                    var minDiam = Convert.ToDecimal(paramMinDiameter.Text);
+                    var minDiam = Convert.ToInt32(paramMinDiameter.Text);
                     query = query.Where(q => q.DiameterMax >= minDiam);
                 }
                 if (paramMaxDiametr.TextLength > 0)
                 {
-                    var maxDiam = Convert.ToDecimal(paramMinDiameter.Text);
+                    var maxDiam = Convert.ToInt32(paramMaxDiametr.Text);
                     query = query.Where(q => q.DiameterMax <= maxDiam);
                 }
                 
                 if (paramMinLength.TextLength > 0)
                 {
-                    var minLength = Convert.ToDecimal(paramMinDiameter.Text);
+                    var minLength = Convert.ToInt32(paramMinLength.Text);
                     query = query.Where(q => q.LengthMax >= minLength);
                 }
                 
                 if (paramMaxLength.TextLength > 0)
                 {
-                    var maxLength = Convert.ToDecimal(paramMinDiameter.Text);
+                    var maxLength = Convert.ToInt32(paramMaxLength.Text);
                     query = query.Where(q => q.LengthMax <= maxLength);
                 }
 
@@ -170,6 +170,30 @@ namespace tms_machines_base
             {
                 machinesGrid.Rows.RemoveAt(i);
             }
+        }
+
+        private void clearCriteriaBtn_Click(object sender, EventArgs e)
+        {
+            ClearMachinesGrid();
+            using (var dbContext = new MachinesEntities())
+            {
+                _currentMachine = dbContext.Machines.First();
+                _currentMachineChar = _currentMachine.MachineCharacteristic;
+
+                foreach (var m in dbContext.Machines)
+                {
+                    machinesGrid.Rows.Add(m.MachineID, m.MachineName, m.Model);
+                }
+
+                if (machinesGrid.RowCount > 0)
+                {
+                    machinesGrid.CurrentCell = machinesGrid.Rows[0].Cells[1];
+                }
+            }
+            paramMinDiameter.Text = String.Empty;
+            paramMaxDiametr.Text = String.Empty;
+            paramMinLength.Text = String.Empty;
+            paramMaxLength.Text = String.Empty;
         }
         
 
