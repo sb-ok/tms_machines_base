@@ -49,22 +49,32 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.picture1 = new System.Windows.Forms.PictureBox();
-            this.picture2 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.picture2 = new System.Windows.Forms.PictureBox();
+            this.picture1 = new System.Windows.Forms.PictureBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.clearCriteriaBtn = new System.Windows.Forms.Button();
+            this.searchBtn = new System.Windows.Forms.Button();
+            this.paramMaxDiametr = new System.Windows.Forms.TextBox();
+            this.paramMaxLength = new System.Windows.Forms.TextBox();
+            this.paramMinDiameter = new System.Windows.Forms.TextBox();
+            this.paramMinLength = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pictureGroupBox = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.machinesGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.pictureGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // machinesGrid
@@ -84,9 +94,8 @@
             this.machinesGrid.ReadOnly = true;
             this.machinesGrid.RowHeadersVisible = false;
             this.machinesGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.machinesGrid.Size = new System.Drawing.Size(351, 392);
+            this.machinesGrid.Size = new System.Drawing.Size(351, 356);
             this.machinesGrid.TabIndex = 0;
-            this.machinesGrid.CurrentCellChanged += new System.EventHandler(this.machinesGrid_CurrentCellChanged);
             this.machinesGrid.SelectionChanged += new System.EventHandler(this.machinesGrid_SelectionChanged);
             // 
             // id
@@ -113,10 +122,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.picture2);
-            this.groupBox1.Controls.Add(this.picture1);
             this.groupBox1.Controls.Add(this.turretLabel);
             this.groupBox1.Controls.Add(this.magazinLabel);
             this.groupBox1.Controls.Add(this.lengthLabel);
@@ -136,16 +141,15 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(381, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(635, 541);
+            this.groupBox1.Size = new System.Drawing.Size(635, 141);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Характеристики станка";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // turretLabel
             // 
             this.turretLabel.AutoSize = true;
-            this.turretLabel.Location = new System.Drawing.Point(158, 174);
+            this.turretLabel.Location = new System.Drawing.Point(539, 70);
             this.turretLabel.Name = "turretLabel";
             this.turretLabel.Size = new System.Drawing.Size(52, 16);
             this.turretLabel.TabIndex = 15;
@@ -154,7 +158,7 @@
             // magazinLabel
             // 
             this.magazinLabel.AutoSize = true;
-            this.magazinLabel.Location = new System.Drawing.Point(158, 154);
+            this.magazinLabel.Location = new System.Drawing.Point(539, 50);
             this.magazinLabel.Name = "magazinLabel";
             this.magazinLabel.Size = new System.Drawing.Size(52, 16);
             this.magazinLabel.TabIndex = 14;
@@ -163,7 +167,7 @@
             // lengthLabel
             // 
             this.lengthLabel.AutoSize = true;
-            this.lengthLabel.Location = new System.Drawing.Point(158, 133);
+            this.lengthLabel.Location = new System.Drawing.Point(539, 29);
             this.lengthLabel.Name = "lengthLabel";
             this.lengthLabel.Size = new System.Drawing.Size(52, 16);
             this.lengthLabel.TabIndex = 13;
@@ -218,7 +222,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(6, 171);
+            this.label8.Location = new System.Drawing.Point(387, 67);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(136, 40);
             this.label8.TabIndex = 7;
@@ -228,7 +232,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(6, 150);
+            this.label7.Location = new System.Drawing.Point(387, 46);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 20);
             this.label7.TabIndex = 6;
@@ -238,7 +242,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(6, 129);
+            this.label6.Location = new System.Drawing.Point(387, 25);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 20);
             this.label6.TabIndex = 5;
@@ -294,123 +298,220 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Марка:";
             // 
-            // groupBox2
+            // label10
             // 
-            this.groupBox2.Controls.Add(this.machinesGrid);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(363, 423);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Список станков";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(445, 324);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(73, 16);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Рисунок 2";
             // 
-            // picture1
+            // label9
             // 
-            this.picture1.Location = new System.Drawing.Point(10, 214);
-            this.picture1.Name = "picture1";
-            this.picture1.Size = new System.Drawing.Size(300, 300);
-            this.picture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picture1.TabIndex = 16;
-            this.picture1.TabStop = false;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(129, 324);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(73, 16);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Рисунок 1";
             // 
             // picture2
             // 
-            this.picture2.Location = new System.Drawing.Point(326, 214);
+            this.picture2.Location = new System.Drawing.Point(325, 21);
             this.picture2.Name = "picture2";
             this.picture2.Size = new System.Drawing.Size(300, 300);
             this.picture2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picture2.TabIndex = 17;
             this.picture2.TabStop = false;
             // 
-            // label9
+            // picture1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(130, 517);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 16);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Рисунок 1";
+            this.picture1.Location = new System.Drawing.Point(9, 21);
+            this.picture1.Name = "picture1";
+            this.picture1.Size = new System.Drawing.Size(300, 300);
+            this.picture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picture1.TabIndex = 16;
+            this.picture1.TabStop = false;
             // 
-            // label10
+            // groupBox2
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(439, 517);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 16);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Рисунок 2";
+            this.groupBox2.Controls.Add(this.machinesGrid);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(363, 387);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Список станков";
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.clearCriteriaBtn);
+            this.groupBox3.Controls.Add(this.searchBtn);
+            this.groupBox3.Controls.Add(this.paramMaxDiametr);
+            this.groupBox3.Controls.Add(this.paramMaxLength);
+            this.groupBox3.Controls.Add(this.paramMinDiameter);
+            this.groupBox3.Controls.Add(this.paramMinLength);
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Location = new System.Drawing.Point(12, 441);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox3.Location = new System.Drawing.Point(12, 405);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(363, 112);
+            this.groupBox3.Size = new System.Drawing.Size(363, 105);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Фильтры поиска";
             // 
-            // label11
+            // clearCriteriaBtn
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(7, 20);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 13);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Длина";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+            this.clearCriteriaBtn.Location = new System.Drawing.Point(268, 74);
+            this.clearCriteriaBtn.Name = "clearCriteriaBtn";
+            this.clearCriteriaBtn.Size = new System.Drawing.Size(89, 23);
+            this.clearCriteriaBtn.TabIndex = 14;
+            this.clearCriteriaBtn.Text = " Очистить";
+            this.clearCriteriaBtn.UseVisualStyleBackColor = true;
             // 
-            // label12
+            // searchBtn
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 37);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(53, 13);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Диаметр";
+            this.searchBtn.Location = new System.Drawing.Point(11, 74);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(89, 23);
+            this.searchBtn.TabIndex = 13;
+            this.searchBtn.Text = "Искать";
+            this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
-            // label13
+            // paramMaxDiametr
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(66, 20);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(18, 13);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "от";
+            this.paramMaxDiametr.Location = new System.Drawing.Point(222, 46);
+            this.paramMaxDiametr.Name = "paramMaxDiametr";
+            this.paramMaxDiametr.Size = new System.Drawing.Size(55, 22);
+            this.paramMaxDiametr.TabIndex = 12;
+            this.paramMaxDiametr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.paramMaxDiametr_KeyPress);
+            // 
+            // paramMaxLength
+            // 
+            this.paramMaxLength.Location = new System.Drawing.Point(222, 19);
+            this.paramMaxLength.Name = "paramMaxLength";
+            this.paramMaxLength.Size = new System.Drawing.Size(55, 22);
+            this.paramMaxLength.TabIndex = 11;
+            this.paramMaxLength.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.paramMaxLength_KeyPress);
+            // 
+            // paramMinDiameter
+            // 
+            this.paramMinDiameter.Location = new System.Drawing.Point(136, 46);
+            this.paramMinDiameter.Name = "paramMinDiameter";
+            this.paramMinDiameter.Size = new System.Drawing.Size(55, 22);
+            this.paramMinDiameter.TabIndex = 10;
+            this.paramMinDiameter.Text = "0";
+            this.paramMinDiameter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.paramMinDiameter_KeyPress);
+            // 
+            // paramMinLength
+            // 
+            this.paramMinLength.Location = new System.Drawing.Point(136, 19);
+            this.paramMinLength.Name = "paramMinLength";
+            this.paramMinLength.Size = new System.Drawing.Size(55, 22);
+            this.paramMinLength.TabIndex = 9;
+            this.paramMinLength.Text = "0";
+            this.paramMinLength.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.paramMinLength_KeyPress);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(197, 46);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(24, 16);
+            this.label16.TabIndex = 8;
+            this.label16.Text = "до";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(197, 20);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(24, 16);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "до";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(66, 37);
+            this.label14.Location = new System.Drawing.Point(112, 46);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(18, 13);
+            this.label14.Size = new System.Drawing.Size(23, 16);
             this.label14.TabIndex = 3;
             this.label14.Text = "от";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(112, 20);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(23, 16);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "от";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(8, 46);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(104, 16);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Диаметр (max):";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(8, 20);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(88, 16);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Длина (max):";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // pictureGroupBox
+            // 
+            this.pictureGroupBox.Controls.Add(this.picture1);
+            this.pictureGroupBox.Controls.Add(this.label10);
+            this.pictureGroupBox.Controls.Add(this.picture2);
+            this.pictureGroupBox.Controls.Add(this.label9);
+            this.pictureGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pictureGroupBox.Location = new System.Drawing.Point(381, 159);
+            this.pictureGroupBox.Name = "pictureGroupBox";
+            this.pictureGroupBox.Size = new System.Drawing.Size(634, 351);
+            this.pictureGroupBox.TabIndex = 20;
+            this.pictureGroupBox.TabStop = false;
+            this.pictureGroupBox.Text = "Изображения станка";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 560);
+            this.ClientSize = new System.Drawing.Size(1028, 518);
+            this.Controls.Add(this.pictureGroupBox);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "База станков";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.machinesGrid)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picture1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.pictureGroupBox.ResumeLayout(false);
+            this.pictureGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -450,6 +551,15 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button clearCriteriaBtn;
+        private System.Windows.Forms.Button searchBtn;
+        private System.Windows.Forms.TextBox paramMaxDiametr;
+        private System.Windows.Forms.TextBox paramMaxLength;
+        private System.Windows.Forms.TextBox paramMinDiameter;
+        private System.Windows.Forms.TextBox paramMinLength;
+        private System.Windows.Forms.GroupBox pictureGroupBox;
     }
 }
 

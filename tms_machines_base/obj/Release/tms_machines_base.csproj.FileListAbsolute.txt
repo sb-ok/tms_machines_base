@@ -14,3 +14,4 @@ C:\tms_machines_base\tms_machines_base\obj\Release\tms_machines_base.Properties.
 C:\tms_machines_base\tms_machines_base\obj\Release\tms_machines_base.csproj.GenerateResource.Cache
 C:\tms_machines_base\tms_machines_base\obj\Release\tms_machines_base.exe
 C:\tms_machines_base\tms_machines_base\obj\Release\tms_machines_base.pdb
+C:\tms_machines_base\tms_machines_base\obj\Release\tms_machines_base.csprojResolveAssemblyReference.cache
