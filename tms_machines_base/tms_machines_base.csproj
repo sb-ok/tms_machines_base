@@ -115,6 +115,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>MachinesModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="machines.db" />
     <None Include="MachinesModel.edmx.diagram">
       <DependentUpon>MachinesModel.edmx</DependentUpon>
     </None>
@@ -409,6 +410,10 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.104.0\build\net45\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.104.0\build\net45\System.Data.SQLite.Core.targets'))" />
   </Target>
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)filestorage\"* "$(ProjectDir)$(OutDir)\filestorage\" /Y/D
+xcopy "$(ProjectDir)machines.db" "$(ProjectDir)$(OutDir)" /Y</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
